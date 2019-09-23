@@ -2,25 +2,44 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/style.css">
-  <title>CSS Grid Implicit vs Explicit Grid Tracks!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>CSS Grid Implicit vs Explicit Grid Tracks!</title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-  </div>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
 
-  <style>
-    .container {
-      display: grid;
-    }
-  </style>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 200px 400px;
+
+            /* If you do not create rows or columns they are called implicit,
+               they have been implicitly created. */
+
+            grid-template-rows: 50px 50px;
+
+            /* Now a grid with solid lines will be created. Bacuse we have explicitly 
+                defined the rows and columns */
+
+            /* If we add some more items, an implicit grid will be created, woth doter line */
+
+            grid-auto-rows: 200px 100px;
+            grid-auto-columns: 200px 20px;
+        }
+    </style>
 </body>
 
 </html>
